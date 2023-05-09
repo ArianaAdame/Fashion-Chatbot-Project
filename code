@@ -1,0 +1,51 @@
+index = 0
+
+name = input("Hi! What's your name? ")
+print("Well, hey there " + name + ", I'm the fashion chatbot. My job is to help you\ndetermine your fashion preferences. Let's get started!\n")
+
+prefcolor1 = input("Can you tell me what your favorite color is? ")
+import random
+index = random.randint(1,3)
+if index == 1:
+    print("Yeah, I like " + prefcolor1 + " too!\n")
+    
+elif index == 2:
+    print("Oh, I love " + prefcolor1 + "!\n")
+
+else:
+    print("Good choice! " + prefcolor1 + " is the best color!\n")
+    
+prefcolor2 = input("What's another color you like?")
+index = random.randint(1,3)
+if index == 1:
+    print("Yeah, I like " + prefcolor2 + " too!\n")
+    
+elif index == 2:
+    print("Oh, I love " + prefcolor2 + "!\n")
+
+else:
+    print("Good choice! " + prefcolor2 + " is the best color!\n")
+    
+hatsyn = input("So, do you wear hats? (Y/N) ")
+if hatsyn == "Y":
+    print("Me too!")
+elif hatsyn == "N":
+    print("Oh...")
+    chatsyn = input("Okay, but hear me out. If the hat was " + prefcolor1 + ", would you wear it? (Y/N) ")
+    if chatsyn == "Y":
+        print("Yay!\n")
+    elif chatsyn == "N":
+        c2hatsyn = input("Really? What if it was " + prefcolor2 + "? (Y/N) ")
+        if c2hatsyn == "Y":
+            print("Yay! I knew I could convince you.\n")
+        elif c2hatsyn == "N":
+            print(":(\n")
+        else:
+            print("Sorry, I don't understand that input.\n")
+    else:
+        print("Sorry, I don't understand that input.\n")
+    
+else:
+    print("Sorry, I don't understand that input.\n")
+    
+print("Well, it was nice talking to you, " + name + "! See you around!")
